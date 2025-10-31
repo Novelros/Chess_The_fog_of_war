@@ -1,11 +1,18 @@
 Для работы потребуются библиотеки Python, и поэтому перед тем, как приступить к написанию, убедитесь, что у вас установлен Python (версия 3.12 или выше), если нет, то вы можете скачать её с официального сайта python.org. После скачивания python, нужно установить библиотеку:
-<img width="305" height="60" alt="image" src="https://github.com/user-attachments/assets/0b671e60-3113-4b0f-9955-b654cf354fab" />
+<br>
 
+<p align="center">
+<img width="305" height="60" alt="image" src="https://github.com/user-attachments/assets/0b671e60-3113-4b0f-9955-b654cf354fab" />
+</p>
 
 #Структура проекта:
 
 Cкачать фотографии фигур можно с GitHub
+<br>
+
+<p align="center">
 <img width="648" height="237" alt="image" src="https://github.com/user-attachments/assets/418d81b6-25fa-484f-afd1-a01f0e986dd0" />
+</p>
 
 #2. Основная часть
 ##2.1 Реализация шахматных фигур
@@ -52,7 +59,11 @@ class ChessPiece:
 Пешка является самой многочисленной, но при этом одной из самых сложных в реализации фигур из-за особых правил перемещения. В отличие от других фигур, пешка имеет различные правила для обычного хода, для хода с перовой клетки, для взятия фигур на проходе, также смены самой пешки на другую фигуру при достижении конца доски
 
 Белая пешка движется вверх по доске (уменьшение координаты Y), а черная – вниз (увеличение координаты Y). Со стартовой позиции пешка может сделать двойной ход на две клетки вперед, если путь свободен. Для взятия фигур противника пешка движется по диагонали на одну клетку вперед. Особый случай - "взятие на проходе" - позволяет пешке взять пешку противника, которая только что сделала двойной ход и переместилась на соседнюю вертикаль
+<br>
+
+<p align="center">
 <img width="649" height="650" alt="image" src="https://github.com/user-attachments/assets/ff81607c-bbd6-4b82-ab09-1cdd59d0f5ed" />
+</p>
 ```python
 class Pawn(ChessPiece):
     """Класс пешки"""
@@ -177,7 +188,11 @@ class Knight(ChessPiece):
 ```
 ##2.1.3 Слон (Bishop)
 Слон перемещается исключительно по диагоналям на любое количество клеток до тех пор, пока не встретит препятствие. Каждый слон остается на клетках одного цвета на протяжении всей игры
+<br>
+
+<p align="center">
 <img width="520" height="520" alt="image" src="https://github.com/user-attachments/assets/95a22e41-4867-4a23-9d24-a320f9be82ee" />
+</p>
 ```python
 class Bishop(ChessPiece):
     """Класс слона"""
@@ -261,7 +276,11 @@ class Rook(ChessPiece):
 ```
 ##2.1.5 Ферзь (Queen)
 Ферзь сочетает в себе возможности ладьи и слона, что делает его самой мощной фигурой на доске. Он может перемещаться на любое количество клеток по горизонтали, вертикали или диагонали. В реализации мы используем композицию, объединяя ходы ладьи и слона
+<br>
+
+<p align="center">
 <img width="540" height="540" alt="image" src="https://github.com/user-attachments/assets/e215c792-3722-4d46-a39c-9def75fdd044" />
+</p>
 ```python
 class Queen(ChessPiece):
     """Класс ферзя"""
@@ -343,6 +362,14 @@ class King(ChessPiece):
 
 
 #3. Итоги 
+<br>
+
+<p align="center">
 <img width="645" height="646" alt="image" src="https://github.com/user-attachments/assets/3f36d2a5-0fa8-4626-a93e-850d2cff7fca" />
+</p>
+<br>
+
+<p align="center">
 <img width="780" height="769" alt="image" src="https://github.com/user-attachments/assets/70cc1395-2300-45b4-8fa5-527c5eec98e4" />
+</p>
 
